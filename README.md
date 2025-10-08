@@ -1,26 +1,65 @@
-💬 Chat App — Real-time Messaging with SignalR
+ChatApp
 
-A simple real-time chat application built with ASP.NET Core and SignalR.
-Users can send and receive messages instantly without page reloads.
+A simple real-time chat app built with ASP.NET Core and SignalR.
 
 🚀 Features
 
-Real-time communication using SignalR
+Real-time messaging
 
-User-to-user and group chat support
+User connection notifications
 
-Message timestamps
+Basic chat UI
 
-Online/offline user status
+Easy to extend (private chat, DB save, etc.)
 
-Message delete (soft delete) option
+⚙️ Run
+git clone https://github.com/Terzi-ibrahim/ChatApp.git
+cd ChatApp
+dotnet restore
+dotnet run
 
-Authentication check before accessing chat
 
-🛠️ Tech Stack
+Then open 👉 https://localhost:5001
 
-Backend: ASP.NET Core 8.0, SignalR
+🧠 Tech
 
-Frontend: Razor Pages / Blazor / JavaScript
+ASP.NET Core
 
-Database: Entity Framework Core (SQL Server or SQLite)
+SignalR
+
+JavaScript (client)
+
+
+Turkish explanation
+
+ChatApp
+
+ASP.NET Core ve SignalR kullanılarak yapılmış basit bir gerçek zamanlı sohbet uygulaması.
+
+🚀 Özellikler
+
+Gerçek zamanlı mesajlaşma
+
+Kullanıcı bağlantı bildirimleri
+
+Basit ve sade arayüz
+
+Geliştirmeye açık yapı (özel sohbet, veritabanı kaydı vs.)
+
+⚙️ Çalıştırma
+git clone https://github.com/Terzi-ibrahim/ChatApp.git
+cd ChatApp
+dotnet restore
+dotnet run
+
+
+Tarayıcıdan aç 👉 https://localhost:5001
+
+🧠 Teknolojiler
+
+ASP.NET Core
+
+SignalR
+
+JavaScript (istemci tarafı)
+
