@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "HomePage";
+}
+<main class="text-center">
+
+    
+    <div>
+
+        <h1 class="h1">@ViewBag.selamlama</h1>
+        <p> Bugün Sohbet Etmeye Ne Dersin?</p>
+    </div>
+    <div class="card my-2">
+        <div class="list-group list-group-flush">      
+            <li class="list-group-item">Saat : @ViewBag.saat </li>
+            <li class="list-group-item">
+                <div class="alert alert-info text-center">
+                    Aktif Kullanıcı Sayısı: <strong id="activeUserCount">@ViewBag.ActiveUserCount</strong>
+                </div>
+
+            </li>
+        </div>
+    </div>
+    @if (User.Identity != null && User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-sm btn-outline-primary" asp-controller="Chat" asp-action="Index">Konuşmaya Başla</a>
+    }
+    else
+    {
+        <a class="btn btn-sm btn-outline-primary" asp-controller="Account" asp-action="Login">Konuşmaya Başla</a>
+    }
+
+</main>
+
+
+

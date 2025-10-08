@@ -1,0 +1,40 @@
+﻿@model  ChatApp.ViewModels.Account.LoginViewModel
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-10">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div class="mb-md-5 mt-md-4 pb-5">
+
+                            <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                            <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                        <form asp-action="Login" asp-controller="Account" method="post">
+                            <!-- Email / Phone / Username -->
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                    <label asp-for="Identifier" class="form-label">Email, Phone or Username</label>
+                                    <input asp-for="Identifier" class="form-control form-control-lg" />
+                            
+                            </div>
+
+                            <!-- Password -->
+                            <div data-mdb-input-init class="form-outline form-white mb-4">
+                                    <label asp-for="Password" class="form-label">Password</label>
+                                    <input asp-for="Password" type="password" class="form-control form-control-lg" />
+                                
+                            </div>
+
+                            <button type="submit"
+                                    class="btn btn-primary btn-lg btn-block"
+                                    style="background-color: #3b5998">
+                                Sign in
+                            </button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

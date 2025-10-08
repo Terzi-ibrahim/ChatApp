@@ -1,0 +1,29 @@
+﻿.footer {
+    border-top: 1px solid #444;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* ⚡ düzeltildi */
+    left: 0; /* sabitleme için ekledik */
+}
+
+    .footer p {
+        margin-bottom: 0.2rem;
+    }
+
+    .footer small {
+        font-size: 0.8rem;
+        color: #aaa;
+    }
+
+/* Responsive padding */
+@media (max-width: 576px) {
+    .footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

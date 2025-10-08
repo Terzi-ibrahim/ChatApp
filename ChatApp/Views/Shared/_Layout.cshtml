@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChatApp</title>
+    
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/css/footer.css"/>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+
+        @if (User.Identity.IsAuthenticated && User.HasClaim("IsAdmin", "True"))
+        {
+            @await Html.PartialAsync("_AdminNavbar")
+        }
+        else if (User.Identity.IsAuthenticated)
+        {
+            @await Html.PartialAsync("_UserNavbar")
+        }
+        else
+        {
+            @await Html.PartialAsync("_NavBar")
+        }
+
+    
+    </header>
+    <div class="container">
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+    @await Html.PartialAsync("_Footer")
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <script src="~/js/site.js" ></script>
+  
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
